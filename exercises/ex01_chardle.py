@@ -4,8 +4,6 @@ __author__ = "730478163"
 
 SECRET: str = "green"
 
-
-"""Part 1.1"""
 print("Welcome to Chardle! ")
 word_guess: str = input("Enter a five character word. ")
 if len(word_guess) != 5:
@@ -16,13 +14,10 @@ if len(character_guess) != 1:
     print("Error: Character must be a single character.  ")
     exit()
 
-"""Part 1.2""" 
 if word_guess == SECRET: 
     print("You have guessed correctly! You're a Chardle master! ")
     exit()  
 
-
-"""Part 2"""
 if word_guess != SECRET:
     print("Searching for " + character_guess + " in " + word_guess)
 
@@ -37,7 +32,7 @@ if character_guess == SECRET[3]:
 if character_guess == SECRET[4]:
     print(character_guess + " found at index 4. ")
 
-"""Part 3"""
+
 instances: int = 0
 
 if character_guess == word_guess[0]:
