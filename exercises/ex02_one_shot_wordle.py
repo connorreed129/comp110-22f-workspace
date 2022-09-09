@@ -17,7 +17,7 @@ emoji: str = ""
 """emoji += box instead of print emojis """
 character_existence: bool = False
 alternate_index_tracker: int = 0
- 
+
  
 index_tracker: int = 0
 while index_tracker < len(SECRET):
