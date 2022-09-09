@@ -2,15 +2,24 @@
 __author__ = "730478163"
 
 
-SECRET: str = "heels"
+SECRET: str = "green"
 
-"""Part 1"""
 print("Welcome to Chardle! ")
 word_guess: str = input("Enter a five character word. ")
+if len(word_guess) != 5:
+    print("Error word must contain 5 letters. ")
+    exit()
 character_guess: str = input("Enter a single character. ")
-print("Searching for " + character_guess + " in " + word_guess)
+if len(character_guess) != 1:
+    print("Error: Character must be a single character. ")
+    exit()
 
-"""Part 2"""
+if word_guess == SECRET: 
+    print("You have guessed correctly! You're a Chardle master! ")
+    exit()  
+else:
+    print("Searching for " + character_guess + " in " + word_guess)
+
 if character_guess == SECRET[0]:
     print(character_guess + " found at index 0. ")
 if character_guess == SECRET[1]:
@@ -22,7 +31,7 @@ if character_guess == SECRET[3]:
 if character_guess == SECRET[4]:
     print(character_guess + " found at index 4. ")
 
-"""Part 3"""
+
 instances_counter: int = 0
 
 if character_guess == word_guess[0]:
@@ -43,10 +52,4 @@ if instances_counter == 1:
 if instances_counter < 1:
     print("No instances of " + str(character_guess) + "found in " + str(word_guess))
 
-"""Part 4"""
-if len(word_guess) != 5:
-    print("Error word must contain 5 letters. ")
-    exit() 
-if len(character_guess) != 1:
-    print("Error: Character must be a single character. ")
-    exit()
+
