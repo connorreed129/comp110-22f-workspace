@@ -1,5 +1,5 @@
-"""Structured Wordle"""
-__author__= "703478163"
+"""Structured Wordle."""
+__author__ = "703478163"
 
 
 def contains_char(word: str, character: str) -> bool:
@@ -9,12 +9,12 @@ def contains_char(word: str, character: str) -> bool:
     while i < len(word):
         if word[i] == character:
             return True
-        i+=1
+        i += 1
     return False
 
 
 def emojified(user_guess: str, secret: str) -> str:
-    """Shows matching characters (yellow), matching characters at indicies (green), and neither (white)"""
+    """Shows matching characters (yellow), matching characters at indicies (green), and neither (white)."""
     assert len(user_guess) == len(secret)
     i: int = 0
     emoji: str = ""
@@ -33,11 +33,11 @@ def emojified(user_guess: str, secret: str) -> str:
 
 
 def input_guess(expected_length: int) -> str:
-    """The guess and the secret word have to be the same length"""
+    """The guess and the secret word have to be the same length."""
     user_guess: str = str(input(f"Enter a {expected_length} character word: "))
     while len(user_guess) != expected_length:
-        print(f"That wasn't a {expected_length} chars! ")
-        user_guess: str = str(input("Try again: "))
+        print(f"That wasn't {expected_length} chars! ")
+        user_guess = str(input("Try again: "))
     return user_guess
     
 
@@ -57,6 +57,7 @@ def main() -> None:
         else:
             turns += 1
     print("X/6 - Sorry, try again tomorrow! ")
+
 
 if __name__ == "__main__":
     main()
